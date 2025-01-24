@@ -6,7 +6,7 @@ import pickle
 
 # Load dataset from Iris.csv
 def load_data():
-    # Load thees dataset from the CSV file
+    # Load the dataset from the CSV file
     df = pd.read_csv("Iris.csv")
 
     # Assuming the last column is the target (species)
@@ -30,6 +30,31 @@ def objective(trial):
     scores = cross_val_score(model, X_train, y_train, cv=5, scoring="accuracy")
     return scores.mean()
 
+# Generate a report of the tuning process
+def generate_report(study):
+    best_params = study.best_params
+    best_score = study.best_value
+    trials = study.trials
+
+    report_lines = []
+    report_lines.append("Hyperparameter Tuning Report")
+    report_lines.append("=" * 30)
+    report_lines.append(f"Best Parameters: {best_params}")
+    report_lines.append(f"Best Accuracy: {best_score:.4f}\n")
+    report_lines.append("All Trials:")
+    report_lines.append("-" * 30)
+
+    for trial in trials:
+        report_lines.append(
+            f"Trial {trial.number}: Accuracy={trial.value:.4f}, Params={trial.params}"
+        )
+
+    # Write the report to a file
+    with open("tuning_report.txt", "w") as f:
+        f.write("\n".join(report_lines))
+
+    print("Report saved to tuning_report.txt")
+
 # Main function
 if __name__ == "__main__":
     # Split data
@@ -39,6 +64,9 @@ if __name__ == "__main__":
     study = optuna.create_study(direction="maximize")
     study.optimize(objective, n_trials=20)
     print("Best Parameters:", study.best_params)
+
+    # Generate and save the report
+    generate_report(study)
 
     # Train model with best parameters
     best_model = RandomForestClassifier(**study.best_params, random_state=42)
