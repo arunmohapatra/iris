@@ -19,5 +19,10 @@ Command: docker image ls
 
 ![image](https://github.com/user-attachments/assets/5cf02dcb-1baf-4a8d-b172-96fbe8232b47)
 
-7. 
+7. Hyperparameter tuning report avaliable @ https://github.com/arunmohapatra/iris/blob/main/tuning_report.txt
+
+![image](https://github.com/user-attachments/assets/a6ba7f5d-579e-4151-883f-8caeb0c47863)
+
+   
+9. 
 
