@@ -6,7 +6,7 @@ import pickle
 
 # Load dataset from Iris.csv
 def load_data():
-    # Load the dataset from the CSV file
+    # Load thees dataset from the CSV file
     df = pd.read_csv("Iris.csv")
 
     # Assuming the last column is the target (species)
