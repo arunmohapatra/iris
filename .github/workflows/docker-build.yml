@@ -37,8 +37,8 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v3
         with:
-          aws-access-key-id: "AKIA4LAEWBP55EA7E7EZ"
-          aws-secret-access-key: "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"
+          aws-access-key-id: "AKIATJHQD7Z4G73HYGVC"
+          aws-secret-access-key: "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"
           aws-region: us-east-1
       # Step 6: Set up kubectl
       - name: Set up kubectl
@@ -54,7 +54,7 @@ jobs:
       # Step 8: Update kubeconfig for EKS cluster
       - name: Update kubeconfig
         run: |
-          aws eks update-kubeconfig --region us-east-1 --name flask-diabetes-cluster
+          aws eks update-kubeconfig --region us-east-1 --name mlops-bits
 
       # Step 9: Deploy using Helm
       - name: Deploy to EKS using Helm
