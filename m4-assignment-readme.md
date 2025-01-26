@@ -13,6 +13,7 @@ POST http://a1e979fcdfbec4aba8e310441af6d15a-2108912047.us-east-1.elb.amazonaws.
 
 You can verify the model using **Postman** or any other API testing tool.
 
+![image](https://github.com/user-attachments/assets/59e96666-92d1-4167-b04b-1f7c034e439b)
 
 
 ### 2. Kubernetes Configuration and Helm Chart
