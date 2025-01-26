@@ -1,6 +1,6 @@
-# ML-Ops Assignment 3
+# M3: Model Experimentation and Packaging
 
-## Deliverables
+## Objective: Train a machine learning model, perform hyperparameter tuning, and package the model for deployment.
 
 ### 1. Hyperparameter Tuning Report
 - **Objective**: Optimize the hyperparameters of a Random Forest Classifier to achieve the highest possible accuracy.
