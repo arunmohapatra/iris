@@ -54,7 +54,7 @@ jobs:
       # Step 8: Update kubeconfig for EKS cluster
       - name: Update kubeconfig
         run: |
-          aws eks update-kubeconfig --region us-east-1 --name flask-iris-cluster
+          aws eks update-kubeconfig --region us-east-1 --name flask-diabetes-cluster
 
       # Step 9: Deploy using Helm
       - name: Deploy to EKS using Helm
