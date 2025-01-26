@@ -90,21 +90,24 @@ Follow these steps to create an **AWS EKS Cluster**:
 
 1. **Install Helm CLI**:
    Ensure Helm is installed on your system.
-   ![image](https://github.com/user-attachments/assets/dbecc3eb-b234-4c32-bb5f-548e454a19dd)
-
 2. **Deploy the Service**:
    Use the following Helm command to deploy the service:
    ```bash
    helm install flask-iris ./iris/flask-iris-chart --namespace flask-iris
    ```
+   
+   ![image](https://github.com/user-attachments/assets/dbecc3eb-b234-4c32-bb5f-548e454a19dd)
    ![image](https://github.com/user-attachments/assets/6780e1e5-99f4-4b52-8296-882ce6c3feef)
    
-3. **Check Service and Deployment Status**:
+4. **Check Service and Deployment Status**:
    Verify the deployment and service status with:
    ```bash
    kubectl get svc -n flask-iris
    ```
    ![image](https://github.com/user-attachments/assets/fbc47240-089b-4e2c-baad-55550bbb911d)
+   ![image](https://github.com/user-attachments/assets/0d111988-efbe-4d66-9f0a-c123479ac0c3)
+   ![image](https://github.com/user-attachments/assets/53733600-ab02-43be-8b07-2d917468c4d6)
+   ![image](https://github.com/user-attachments/assets/9f0ffe8a-76cb-40be-a897-e191b50ded0c)
 
    
 
@@ -113,4 +116,5 @@ To clean up resources and delete the EKS cluster, use:
 ```bash
 eksctl delete cluster --name flask-iris-cluster
 ```
+   ![image](https://github.com/user-attachments/assets/c764b7f9-e5e2-4f21-8a56-e6a95672bd25)
 
