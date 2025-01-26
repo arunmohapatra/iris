@@ -1,4 +1,4 @@
-name: Docker Build and Push
+name: Build, Push, and Deploy to EKS
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -33,3 +33,33 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: arunbits/flask-app:latest
+      # Step 5: Configure AWS credentials
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      # Step 6: Set up kubectl
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v3
+        with:
+          version: 'v1.27.0'
+
+      # Step 7: Set up Helm
+      - name: Set up Helm
+        uses: azure/setup-helm@v3
+        with:
+          version: 'v3.12.0'
+      # Step 8: Update kubeconfig for EKS cluster
+      - name: Update kubeconfig
+        run: |
+          aws eks update-kubeconfig --region us-east-1 --name flask-iris-cluster
+
+      # Step 9: Deploy using Helm
+      - name: Deploy to EKS using Helm
+        run: |
+          helm upgrade --install flask-app ./helm \
+            --namespace default \
+            --set image.repository=arunbits/flask-app \
+            --set image.tag=latest
