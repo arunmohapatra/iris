@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Print the current working directory for debugging
 print("Current Working Directory:", os.getcwd())
-model_path = os.path.join(os.path.dirname(__file__), "../models/model.pkl")
+model_path = os.path.join(os.path.dirname(__file__), "model.pkl")
 
 # Load the model
 model = joblib.load(model_path)
