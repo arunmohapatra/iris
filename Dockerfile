@@ -5,7 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copy project files
-COPY app.py model.pkl requirements.txt ./
+COPY src/app.py models/model.pkl requirements.txt ./
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
