@@ -51,11 +51,16 @@ Follow these steps to create an **AWS EKS Cluster**:
      --nodes-max 3 \
      --managed
    ```
+   ![image](https://github.com/user-attachments/assets/4d9cb576-1a81-48d9-9b7c-e8870b80931b)
+   ![image](https://github.com/user-attachments/assets/b3d32c1c-619f-41e9-a1bc-b1316289e319)
+   ![image](https://github.com/user-attachments/assets/aa55d1cd-2f0a-4e77-83fd-4ae3d64fdd2a)
+   ![image](https://github.com/user-attachments/assets/c66d06d7-e309-48aa-8c51-890e05f1f0ab)
 
 4. **Verify the Cluster**:
    Once created, verify the cluster in the AWS Management Console.  
    **Cluster Name**: `flask-iris-cluster`
 
+   ![image](https://github.com/user-attachments/assets/7bedbf36-d801-4507-9aa5-7c62ceecf3dd)
 
 
 #### Login to AWS EKS Cluster
@@ -65,39 +70,43 @@ Follow these steps to create an **AWS EKS Cluster**:
    ```bash
    aws eks --region us-east-1 update-kubeconfig --name flask-iris-cluster
    ```
+   ![image](https://github.com/user-attachments/assets/90cb79c6-5f0f-41da-8ac4-030ae6ffd877)
 
 2. **Create a Namespace**:
    Create a namespace within the cluster:
    ```bash
    kubectl create namespace flask-iris
    ```
+   ![image](https://github.com/user-attachments/assets/94ef1498-b488-4630-8254-b0f5231d0631)
 
 3. **Verify Namespace**:
    Check if the namespace was created successfully:
    ```bash
    kubectl get namespace
    ```
-
-
+   ![image](https://github.com/user-attachments/assets/6fd710ad-7cf3-4231-8af3-ae408f5c29e7)
 
 #### Deployment Using Helm
 
 1. **Install Helm CLI**:
    Ensure Helm is installed on your system.
+   ![image](https://github.com/user-attachments/assets/dbecc3eb-b234-4c32-bb5f-548e454a19dd)
 
 2. **Deploy the Service**:
    Use the following Helm command to deploy the service:
    ```bash
    helm install flask-iris ./iris/flask-iris-chart --namespace flask-iris
    ```
-
+   ![image](https://github.com/user-attachments/assets/6780e1e5-99f4-4b52-8296-882ce6c3feef)
+   
 3. **Check Service and Deployment Status**:
    Verify the deployment and service status with:
    ```bash
    kubectl get svc -n flask-iris
    ```
+   ![image](https://github.com/user-attachments/assets/fbc47240-089b-4e2c-baad-55550bbb911d)
 
-
+   
 
 #### Destroying the EKS Cluster
 To clean up resources and delete the EKS cluster, use:
