@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__)
 
-# Print the current working directory for debugging
+# Print the current working directory for debuggingg
 print("Current Working Directory:", os.getcwd())
 model_path = os.path.join(os.path.dirname(__file__), "model.pkl")
 
