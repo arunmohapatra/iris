@@ -16,9 +16,7 @@ You can verify the model using **Postman** or any other API testing tool.
 
 
 ### 2. Kubernetes Configuration and Helm Chart
-The Kubernetes configuration files and Helm chart used for deployment can be found in the following GitHub repository:
-https://github.com/arunmohapatra/iris/tree/main/helm
-
+The Kubernetes configuration files and Helm chart used for deployment can be found in the following GitHub repository: https://github.com/arunmohapatra/iris/tree/main/helm
 
 
 ### 3. Deployment and Orchestration Process
