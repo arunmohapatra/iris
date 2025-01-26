@@ -1,7 +1,6 @@
+# M4: Model Deployment & Orchestration (Optional)
 
-# ML-Ops Assignment 4
-
-## Deliverables
+**Objective**: Deploy a machine learning model and orchestrate its operations using Kubernetes.
 
 ### 1. Deployed Model Endpoint
 The machine learning model is deployed and accessible via the following endpoint:
