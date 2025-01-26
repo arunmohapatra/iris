@@ -17,7 +17,7 @@ You can verify the model using **Postman** or any other API testing tool.
 
 ### 2. Kubernetes Configuration and Helm Chart
 The Kubernetes configuration files and Helm chart used for deployment can be found in the following GitHub repository:
-[Helm Chart for Flask Iris Model](https://github.com/arunmohapatra/iris/tree/main/flask-iris-chart)
+https://github.com/arunmohapatra/iris/tree/main/helm
 
 
 
