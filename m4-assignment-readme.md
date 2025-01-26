@@ -97,13 +97,14 @@ Follow these steps to create an **AWS EKS Cluster**:
    ```
    
    ![image](https://github.com/user-attachments/assets/dbecc3eb-b234-4c32-bb5f-548e454a19dd)
-   ![image](https://github.com/user-attachments/assets/6780e1e5-99f4-4b52-8296-882ce6c3feef)
+
    
 4. **Check Service and Deployment Status**:
    Verify the deployment and service status with:
    ```bash
    kubectl get svc -n flask-iris
    ```
+   ![image](https://github.com/user-attachments/assets/6780e1e5-99f4-4b52-8296-882ce6c3feef)
    ![image](https://github.com/user-attachments/assets/fbc47240-089b-4e2c-baad-55550bbb911d)
    ![image](https://github.com/user-attachments/assets/0d111988-efbe-4d66-9f0a-c123479ac0c3)
    ![image](https://github.com/user-attachments/assets/53733600-ab02-43be-8b07-2d917468c4d6)
