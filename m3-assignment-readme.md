@@ -1,6 +1,6 @@
 # M3: Model Experimentation and Packaging
 
-## Objective: Train a machine learning model, perform hyperparameter tuning, and package the model for deployment.
+# Objective: Train a machine learning model, perform hyperparameter tuning, and package the model for deployment.
 
 ### 1. Hyperparameter Tuning Report
 - **Objective**: Optimize the hyperparameters of a Random Forest Classifier to achieve the highest possible accuracy.
