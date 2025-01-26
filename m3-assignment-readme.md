@@ -30,7 +30,6 @@
 #### Conclusion:
 The tuning process successfully identified optimal hyperparameters, resulting in a highly accurate Random Forest Classifier. The model is robust and ready for deployment with the chosen hyperparameters.
 
----
 
 ### 2. Docker and Flask Application
 - **Dockerfile**: [View Dockerfile](https://github.com/arunmohapatra/iris/blob/main/Dockerfile)
@@ -38,11 +37,10 @@ The tuning process successfully identified optimal hyperparameters, resulting in
 - **Complete Code Base**: [GitHub Repository](https://github.com/arunmohapatra/iris)
 
 #### Docker Hub:
-The container image is available on Docker Hub:  
-[Docker Hub Link](https://hub.docker.com/r/arunbits/flask-app)
+The container image is available on Docker Hub:  [Docker Hub Link](https://hub.docker.com/r/arunbits/flask-app)
+
 ![image](https://github.com/user-attachments/assets/639f51ec-918d-4f32-9bfd-8f87a49b7490)
 
----
 
 ### 3. Running the Dockerized Application
 
