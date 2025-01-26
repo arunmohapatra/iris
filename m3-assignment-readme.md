@@ -55,7 +55,8 @@ The container image is available on Docker Hub:  [Docker Hub Link](https://hub.d
 2. **Pull and Run the Docker Image**:
    ```bash
    docker run -p 5000:5000 arunbits/flask-app:latest
-   ![image](https://github.com/user-attachments/assets/6e91ac0a-c6b0-4bf8-a410-948d34f0a305)
+![image](https://github.com/user-attachments/assets/6c6561fc-c41c-44d5-84a4-3428b2ef2dfd)
+
 
    Verify docker container is running
    ![image](https://github.com/user-attachments/assets/512b9829-b72b-4ac6-b86c-306bf9272025)
