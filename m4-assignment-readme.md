@@ -32,6 +32,7 @@ Follow these steps to create an **AWS EKS Cluster**:
    ```bash
    aws configure
    ```
+   ![image](https://github.com/user-attachments/assets/2180ff38-ccff-4c1c-97d3-70b2cee9f2f0)
 
 2. **Install eksctl CLI**:
    - If `eksctl` is not already installed, follow the instructions to install it from the [AWS EKS eksctl documentation](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html).
