@@ -1,11 +1,17 @@
 from flask import Flask, request, jsonify
 import pickle
+import joblib
+import os
 
 app = Flask(__name__)
 
-# Load the trained model
-with open("model.pkl", "rb") as f:
-    model = pickle.load(f)
+# Print the current working directory for debugging
+print("Current Working Directory:", os.getcwd())
+model_path = os.path.join(os.path.dirname(__file__), "../models/model.pkl")
+
+# Load the model
+model = joblib.load(model_path)
+print("Model loaded successfully.")
 
 @app.route("/predict", methods=["POST"])
 def predict():
