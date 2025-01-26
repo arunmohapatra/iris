@@ -33,7 +33,7 @@ The tuning process successfully identified optimal hyperparameters, resulting in
 
 ### 2. Docker and Flask Application
 - **Dockerfile**: [View Dockerfile](https://github.com/arunmohapatra/iris/blob/main/Dockerfile)
-- **Flask Application Code**: [View Flask Application](https://github.com/arunmohapatra/iris/blob/main/app.py)
+- **Flask Application Code**: [View Flask Application](https://github.com/arunmohapatra/iris/blob/main/src/app.py)
 - **Complete Code Base**: [GitHub Repository](https://github.com/arunmohapatra/iris)
 
 #### Docker Hub:
@@ -53,6 +53,7 @@ The container image is available on Docker Hub:  [Docker Hub Link](https://hub.d
 
 
 2. **Pull and Run the Docker Image**:
+
    docker run -p 5000:5000 arunbits/flask-app:latest
 
    ![image](https://github.com/user-attachments/assets/6c6561fc-c41c-44d5-84a4-3428b2ef2dfd)
