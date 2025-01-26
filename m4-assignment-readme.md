@@ -117,5 +117,5 @@ To clean up resources and delete the EKS cluster, use:
 ```bash
 eksctl delete cluster --name flask-iris-cluster
 ```
-   ![image](https://github.com/user-attachments/assets/c764b7f9-e5e2-4f21-8a56-e6a95672bd25)
+     ![image](https://github.com/user-attachments/assets/c764b7f9-e5e2-4f21-8a56-e6a95672bd25)
 
