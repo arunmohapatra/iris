@@ -36,3 +36,16 @@ public class ApiCaller {
     }
 }
 
+
+{
+  "type": "webhook",
+  "url": "http://your-ai-service:5000/analyze",
+  "method": "POST",
+  "payload": {
+    "metrics": "{{ execution.context.api_metrics }}"
+  },
+  "successConditions": {
+    "rollback_triggered": true
+  }
+}
+
